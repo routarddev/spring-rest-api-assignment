@@ -1,13 +1,8 @@
 package mn.travel.marketsurveys.service;
 
-import static com.mongodb.client.model.Filters.eq;
-
-import com.mongodb.DBCursor;
-import com.mongodb.client.model.Filters;
 import mn.travel.marketsurveys.database.MongoRepository;
-import mn.travel.marketsurveys.model.Survey;
-
 import mn.travel.marketsurveys.database.MongoUtils;
+import mn.travel.marketsurveys.model.Survey;
 import org.bson.types.ObjectId;
 import org.jongo.MongoCollection;
 import org.jongo.MongoCursor;
@@ -16,10 +11,9 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.regex.Pattern;
+
+import static com.mongodb.client.model.Filters.eq;
 
 @Component
 public class MarketSurveysService {
