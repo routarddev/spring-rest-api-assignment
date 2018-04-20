@@ -38,8 +38,8 @@ public class MarketSurveysController {
 		return new ResponseEntity<>(service.registerSurvey(survey), HttpStatus.OK);
 	}
 
-	@ApiOperation(value = "Find the player details", nickname = "Find the player details",
-			notes = "It will retrieve the player details")
+	@ApiOperation(value = "Find surveys", nickname = "Find surveys",
+			notes = "It will retrieve all markets surveys")
 	@RequestMapping(value = ENDPOINT, method = RequestMethod.GET)
 	@ResponseBody
 	public HttpEntity<List<Survey>> getSurveys() {
@@ -48,8 +48,8 @@ public class MarketSurveysController {
 		return new ResponseEntity<>(listOfSurveys, listOfSurveys != null ? HttpStatus.OK : HttpStatus.NOT_FOUND);
 	}
 
-	@ApiOperation(value = "Find the player details", nickname = "Find the player details",
-			notes = "It will retrieve the player details")
+	@ApiOperation(value = "Get surveys by subject", nickname = "Get surveys by subject",
+			notes = "It will retrieve a list of surveys related to a subject")
 	@RequestMapping(value = ENDPOINT + "/{subject}", method = RequestMethod.GET)
 	@ResponseBody
 	public HttpEntity<List<Survey>> getSurveysBySubject(@PathVariable String subject) {
@@ -58,8 +58,8 @@ public class MarketSurveysController {
 	}
 
 
-	@ApiOperation(value = "Find the player details", nickname = "Find the player details",
-			notes = "It will retrieve the player details")
+	@ApiOperation(value = "Get survey details", nickname = "Get survey details",
+			notes = "It will retrieve the specified survey details")
 	@RequestMapping(value = ENDPOINT + "/{subject}/{id}", method = RequestMethod.GET)
 	@ResponseBody
 	public HttpEntity<Survey> getSurveyDetails(@PathVariable String subject, @PathVariable String id) {
@@ -67,8 +67,8 @@ public class MarketSurveysController {
 		return new ResponseEntity<>(survey, survey != null ? HttpStatus.OK: HttpStatus.NOT_FOUND);
 	}
 
-	@ApiOperation(value = "Delete the specified player", nickname = "Delete the specified player",
-			notes = "It will delete the player specified in the request.")
+	@ApiOperation(value = "Delete the specified survey", nickname = "Delete the specified survey",
+			notes = "It will delete the survey specified in the request.")
 	@RequestMapping(value = ENDPOINT + "/{subject}", method = RequestMethod.DELETE)
 	@ResponseBody
 	public HttpEntity<Void> deleteSurvey(@PathVariable String subject) {
