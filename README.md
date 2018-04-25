@@ -2,7 +2,7 @@
 
 Java REST API using Spring Boot Framework exposing CRUD methods via HTTP to manage market surveys.
 
-Persistence with MongoDB.
+Persistence with MongoDB (db/collection: surveys)
 
 - Main URL: http://localhost:8080/api/v1/
 - API documentation and tests: http://localhost:8080/swagger-ui.html
