@@ -6,6 +6,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.PropertySources;
 
+/**
+ * Created by routarddev on 13/04/18.
+ */
 @SpringBootApplication
 @ComponentScan(basePackages = {"mn.travel.marketsurveys"})
 @PropertySources({ @PropertySource("classpath:application.properties") })

@@ -1,7 +1,7 @@
 package mn.travel.marketsurveys.model;
 
 /**
- * Created by hadrien on 13/04/18.
+ * Created by routarddev on 13/04/18.
  */
 public class Range {
 

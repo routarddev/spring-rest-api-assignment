@@ -1,51 +1,37 @@
 package mn.travel.marketsurveys.model;
 
-import org.jongo.marshall.jackson.oid.MongoId;
 import org.jongo.marshall.jackson.oid.MongoObjectId;
 
+/**
+ * Created by routarddev on 13/04/18.
+ */
 public class Survey {
 	
 	public static final String SURVEY_SUBJECT = "subject";
-	
-	@MongoId
-	@MongoObjectId
-	private String id;
+
+    @MongoObjectId
+    private String _id;
 	private String subject;
 	private Target target;
-	//private Country country;
-	//private String target;
-	private String country;
+	private Country country;
+
 
 	public Survey() {}
 
-	public String getCountry() {
-		return country;
-	}
-
-	public void setCountry(String country) {
-		this.country = country;
-	}
-
-
-	public Survey(String id, String subject, Target target, String country) {
-		this.id = id;
+	public Survey(String subject, Target target, Country country) {
 		this.subject = subject;
 		this.target = target;
 		this.country = country;
 	}
-
 
 	public static String getSurveySubject() {
 		return SURVEY_SUBJECT;
 	}
 
 	public String getId() {
-		return id;
+		return _id;
 	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
+	public void setId(String id) { this._id = id; }
 
 	public String getSubject() {
 		return subject;
@@ -64,7 +50,6 @@ public class Survey {
 		this.target = target;
 	}
 
-	/*
 	public Country getCountry() {
 		return country;
 	}
@@ -72,5 +57,5 @@ public class Survey {
 	public void setCountry(Country country) {
 		this.country = country;
 	}
-	*/
+
 }

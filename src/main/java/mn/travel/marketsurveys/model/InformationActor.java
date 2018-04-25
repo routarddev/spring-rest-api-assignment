@@ -1,30 +1,19 @@
 package mn.travel.marketsurveys.model;
 
-import org.jongo.marshall.jackson.oid.MongoId;
-import org.jongo.marshall.jackson.oid.MongoObjectId;
-
 /**
- *
+ * Created by routarddev on 13/04/18.
  */
 public class InformationActor {
 
-    @MongoId
-    @MongoObjectId
-    private String id;
     private String informationActorId;
     private String name;
 
     public InformationActor() {
     }
 
-    public InformationActor(String id, String informationActorId, String name) {
-        this.id = id;
+    public InformationActor(String informationActorId, String name) {
         this.informationActorId = informationActorId;
         this.name = name;
-    }
-
-    public String getId() {
-        return id;
     }
 
     public String getInformationActorId() {
@@ -33,10 +22,6 @@ public class InformationActor {
 
     public String getName() {
         return name;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public void setInformationActorId(String informationActorId) {

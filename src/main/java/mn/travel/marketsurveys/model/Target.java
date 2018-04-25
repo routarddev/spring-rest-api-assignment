@@ -1,16 +1,10 @@
 package mn.travel.marketsurveys.model;
 
-import org.jongo.marshall.jackson.oid.MongoId;
-import org.jongo.marshall.jackson.oid.MongoObjectId;
-
 /**
- * Created by hadrien on 13/04/18.
+ * Created by routarddev on 13/04/18.
  */
 public class Target {
 
-    @MongoId
-    @MongoObjectId
-    private String id;
     private Gender gender;
     private int age;
     private Income income;
@@ -18,19 +12,10 @@ public class Target {
     public Target() {
     }
 
-    public Target(String id, Gender gender, int age, Income income) {
-        this.id = id;
+    public Target(Gender gender, int age, Income income) {
         this.gender = gender;
         this.age = age;
         this.income = income;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public Gender getGender() {
